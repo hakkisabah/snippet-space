@@ -1,0 +1,4 @@
+# command line with run
+docker run --name container-pg -e POSTGRES_PASSWORD=yoursecretpass -d --restart always postgres
+# or expose port 5432 to localhost
+docker run --name container-pg -e POSTGRES_PASSWORD=yoursecretpass -d -p 5432:5432 --restart always postgres
