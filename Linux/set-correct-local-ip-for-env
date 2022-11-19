@@ -1,0 +1,5 @@
+# its useful some setup of programs, app..
+# also you can use it for your own purpose
+# this example usable for .profile or .bashrc or .bash_profile or .zshrc or etc..
+CURRENTIPPREFIX=192.168.1
+CURRENTINTERFACEIP=$(ip addr show $(ip addr | awk "/$CURRENTIPPREFIX/{print}" | awk 'NF>1{print $NF}')  | awk '$1 == "inet" { print $2 }' | cut -d/ -f1)
