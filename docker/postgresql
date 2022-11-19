@@ -1,3 +1,5 @@
+# NOTE : if you want to apply for --restart always parameter, you need to enable the docker service in systemd
+# for example : systemctl enable docker
 # command line with run
 docker run --name container-pg -e POSTGRES_PASSWORD=yoursecretpass -d --restart always postgres
 # or expose port 5432 to localhost
